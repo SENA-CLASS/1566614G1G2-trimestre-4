@@ -17,5 +17,11 @@ public class App {
         tanque1.disparar();
         tanque1.disparar();
         System.out.println(tanque1.getCantidadBalas());
+
+        tanque1.disparar();
+
+
+        float a = 345235423777F;
+
     }
 }

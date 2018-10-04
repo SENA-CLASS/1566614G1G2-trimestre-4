@@ -19,7 +19,7 @@ public class Tanque {
         if (this.cantidadBalas > 0) {
             this.cantidadBalas = this.cantidadBalas - 1;
             System.out.println("buummmmmmmmmm");
-        }else{
+        } else {
             System.out.println("OJO no hay balas");
         }
     }
