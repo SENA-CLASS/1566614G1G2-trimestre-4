@@ -14,6 +14,10 @@ public class Tanque {
     public void cargar(int cantidadValas) {
         this.cantidadBalas = this.cantidadBalas + cantidadValas;
     }
+    
+    public void cargar(String cantidadValas) {
+        this.cantidadBalas = this.cantidadBalas + Integer.parseInt(cantidadValas);
+    }
 
     public void disparar() {
         if (this.cantidadBalas > 0) {
