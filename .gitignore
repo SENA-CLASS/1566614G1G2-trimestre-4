@@ -21,3 +21,19 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+# maven
+target
+
+# intellj
+.idea
+
+#netbeans
+build
+dist
+
+#eclipse
+.settings
+.classpath
+.project
+poo/ejercicio01/ejercicio01.iml
