@@ -1,5 +1,6 @@
 package co.edu.sena.ejemplopoo.metodosabstractos;
 
-public class Animal {
+public abstract class Animal {
+	public abstract void respirar();
 
 }
