@@ -1,6 +1,10 @@
 package co.edu.sena.ejemplopoo.metodoestatico;
 
 public class Calculadora {
+	
+	private Calculadora() {
+		
+	}
 
 	public static void suma(int a, int b) {
 		System.out.println(a + b);

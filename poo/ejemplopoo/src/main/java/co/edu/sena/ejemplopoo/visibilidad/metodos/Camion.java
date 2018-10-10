@@ -11,7 +11,7 @@ public class Camion {
     }
 
     void atopellar(){
-
+    	this.acelerar();
     }
 
     protected void encender(){
