@@ -19,5 +19,7 @@ public class App {
         sordo.ver();
         ((Persona) sordo).escuchar();// ojo este ya no es una ciego es ahora una persona
 
+        Persona p = (Persona)sordo;
+        p.escuchar();
     }
 }
