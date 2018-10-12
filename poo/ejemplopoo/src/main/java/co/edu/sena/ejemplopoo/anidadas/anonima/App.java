@@ -63,6 +63,25 @@ public class App {
         }
 
 
+        List<String> arreglo = new ArrayList<>();
+        arreglo.add("pedro");
+        arreglo.add("sandra");
+        arreglo.add("michael");
+        arreglo.add("alejandro");
+        arreglo.add("andres");
+
+        Collections.sort(arreglo, new Comparator<String>() {
+            @Override
+            public int compare(String o1, String o2) {
+                return o1.compareTo(o2);
+            }
+        });
+
+        for (String k: arreglo) {
+            System.out.println(k);
+        }
+
+
 
 
     }

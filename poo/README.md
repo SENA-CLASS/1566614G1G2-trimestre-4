@@ -8,8 +8,6 @@
 8. constructor: sirve para crear los objetos
 9. constructor generico esta de forma invisible a menos que se cree un contructor con parametros
 10. constructor con parametros
-
-
 11. sobrecarga de constructores
 12. sobrecarga de metodos
 13. atributos estaticos
@@ -32,8 +30,9 @@
 30. clases anidadas
 30.1 Nested classes
 30.1.1. static (static nested classes)
-30.1.2. static (Non-static nested classes or inner classes)
+30.1.2. Non-static (Non-static nested classes or inner classes)
 30.2. Anonymous Classes
+
 31.3. inner class into methods
 32. asociación (asociación, composición, agregación) simples
 33. sobreescritura del metodo equals, hashcode
