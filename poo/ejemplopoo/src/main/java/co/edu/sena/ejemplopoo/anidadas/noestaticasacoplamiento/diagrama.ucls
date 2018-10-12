@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.2.2" icons="true" always-add-relationships="true" generalizations="true" realizations="true" 
+  associations="true" dependencies="true" nesting-relationships="true" router="FAN">  
+  <class id="1" language="java" name="co.edu.sena.ejemplopoo.anidadas.noestaticasacoplamiento.Clase1.Clase2.Clase3" 
+    project="ejemplopoo" 
+    file="/ejemplopoo/src/main/java/co/edu/sena/ejemplopoo/anidadas/noestaticasacoplamiento/Clase1.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="99" width="257" x="43" y="454"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="2" language="java" 
+    name="co.edu.sena.ejemplopoo.anidadas.noestaticasacoplamiento.Clase1.Clase2.Clase3.Clase4" project="ejemplopoo" 
+    file="/ejemplopoo/src/main/java/co/edu/sena/ejemplopoo/anidadas/noestaticasacoplamiento/Clase1.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="81" width="257" x="43" y="593"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="3" language="java" name="co.edu.sena.ejemplopoo.anidadas.noestaticasacoplamiento.InterfaceClase1" 
+    project="ejemplopoo" 
+    file="/ejemplopoo/src/main/java/co/edu/sena/ejemplopoo/anidadas/noestaticasacoplamiento/InterfaceClase1.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="493" y="296"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="4" language="java" name="co.edu.sena.ejemplopoo.anidadas.noestaticasacoplamiento.Clase1" 
+    project="ejemplopoo" 
+    file="/ejemplopoo/src/main/java/co/edu/sena/ejemplopoo/anidadas/noestaticasacoplamiento/Clase1.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="325" y="152"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="5" language="java" name="co.edu.sena.ejemplopoo.anidadas.noestaticasacoplamiento.InterfaceClase3" 
+    project="ejemplopoo" 
+    file="/ejemplopoo/src/main/java/co/edu/sena/ejemplopoo/anidadas/noestaticasacoplamiento/InterfaceClase3.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="81" width="257" x="361" y="593"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="6" language="java" name="co.edu.sena.ejemplopoo.anidadas.noestaticasacoplamiento.Clase1.Clase2" 
+    project="ejemplopoo" 
+    file="/ejemplopoo/src/main/java/co/edu/sena/ejemplopoo/anidadas/noestaticasacoplamiento/Clase1.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="99" width="257" x="43" y="315"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="7" language="java" name="co.edu.sena.ejemplopoo.anidadas.noestaticasacoplamiento.InterfaceClase2" 
+    project="ejemplopoo" 
+    file="/ejemplopoo/src/main/java/co/edu/sena/ejemplopoo/anidadas/noestaticasacoplamiento/InterfaceClase2.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="81" width="257" x="361" y="454"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="8" language="java" name="co.edu.sena.ejemplopoo.anidadas.noestaticasacoplamiento.App" project="ejemplopoo" 
+    file="/ejemplopoo/src/main/java/co/edu/sena/ejemplopoo/anidadas/noestaticasacoplamiento/App.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="99" width="257" x="599" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="9" language="java" name="co.edu.sena.ejemplopoo.anidadas.noestaticasacoplamiento.InterfaceClase4" 
+    project="ejemplopoo" 
+    file="/ejemplopoo/src/main/java/co/edu/sena/ejemplopoo/anidadas/noestaticasacoplamiento/InterfaceClase4.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="63" width="257" x="321" y="714"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <realization id="10">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="7"/>  
+  </realization>  
+  <dependency id="11">    
+    <bendpoint x="330" y="454"/>    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="5"/>  
+  </dependency>  
+  <dependency id="12">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="5"/>  
+  </dependency>  
+  <dependency id="13">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="7"/>  
+  </dependency>  
+  <dependency id="14">    
+    <bendpoint x="669" y="176"/>    
+    <bendpoint x="669" y="315"/>    
+    <bendpoint x="669" y="454"/>    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="5"/>  
+  </dependency>  
+  <dependency id="15">    
+    <bendpoint x="330" y="593"/>    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="9"/>  
+  </dependency>  
+  <nesting id="16">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="2"/>  
+  </nesting>  
+  <realization id="17">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="9"/>  
+  </realization>  
+  <dependency id="18">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="4"/>  
+  </dependency>  
+  <dependency id="19">    
+    <bendpoint x="648" y="176"/>    
+    <bendpoint x="648" y="315"/>    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="7"/>  
+  </dependency>  
+  <dependency id="20">    
+    <bendpoint x="608" y="176"/>    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="3"/>  
+  </dependency>  
+  <nesting id="21">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="1"/>  
+  </nesting>  
+  <dependency id="22">    
+    <bendpoint x="330" y="315"/>    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="7"/>  
+  </dependency>  
+  <dependency id="23">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="9"/>  
+  </dependency>  
+  <nesting id="24">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="6"/>  
+  </nesting>  
+  <realization id="25">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="5"/>  
+  </realization>  
+  <realization id="26">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="3"/>  
+  </realization>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>

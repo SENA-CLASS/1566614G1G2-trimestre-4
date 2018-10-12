@@ -43,7 +43,7 @@ public class App {
         System.out.println(carro);
         System.out.println(carro2);
 
-        List<Carro> lista = new ArrayList<Carro>();
+        List<Carro> lista = new ArrayList<>();
         lista.add(new Carro("abc-124","mazda"));
         lista.add(new Carro("abc-127","hyundai"));
         lista.add(new Carro("abc-124","chevrolet"));
@@ -71,7 +71,6 @@ public class App {
         arreglo.add("andres");
 
         Collections.sort(arreglo, new Comparator<String>() {
-            @Override
             public int compare(String o1, String o2) {
                 return o1.compareTo(o2);
             }
