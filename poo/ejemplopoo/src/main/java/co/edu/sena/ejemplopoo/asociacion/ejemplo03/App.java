@@ -1,11 +1,12 @@
 package co.edu.sena.ejemplopoo.asociacion.ejemplo03;
 
 import java.util.ArrayList;
+import java.util.Collection;
 
 public class App {
-    public static void main(String[] args) {
+	public static void main(String[] args) {
         Edificio edificio = new Edificio();
-        edificio.setApartamentos(new ArrayList<>());
+        edificio.setApartamentos((Collection)new ArrayList<>());
         edificio.getApartamentos().add(new Apartamento());
         edificio.getApartamentos().add(new Apartamento());
         edificio.getApartamentos().add(new Apartamento());

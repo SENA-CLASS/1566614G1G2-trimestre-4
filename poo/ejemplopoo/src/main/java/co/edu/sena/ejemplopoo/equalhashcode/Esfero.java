@@ -32,7 +32,7 @@ public class Esfero {
     }
 
     @Override
-    public boolean equals(Object o) {// compara objetos object
+    public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Esfero esfero = (Esfero) o;
