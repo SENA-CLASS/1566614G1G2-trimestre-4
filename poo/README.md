@@ -35,9 +35,9 @@
 31.3. inner class into methods
 32. asociación (asociación, composición, agregación) simples
 33. sobreescritura del metodo equals, hashcode
-
 34. Collections (List)
 35. metodo toString()
-36. asosiation class
-37. POJO(plain old java object) clase con sus getters, setters y constructor generico
+36. POJO(plain old java object) clase con sus getters, setters y constructor generico
+
+37. asosiation class
 

@@ -10,4 +10,8 @@ public class Camioneta extends Carro {
     public void apagar() {
         System.out.println("apagar con un boton");
     }
+
+    public void cargar(){
+        System.out.println("cargo 1 tonelada");
+    }
 }

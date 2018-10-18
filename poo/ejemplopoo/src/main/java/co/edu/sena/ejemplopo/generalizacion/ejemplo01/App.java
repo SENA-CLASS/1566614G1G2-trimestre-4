@@ -13,6 +13,9 @@ public class App {
     public static void mostrarCarro(Carro carro){
         carro.prender();
         carro.apagar();
+        if(carro instanceof Camioneta){
+            ((Camioneta)carro).cargar();
+        }
     }
 
 }
