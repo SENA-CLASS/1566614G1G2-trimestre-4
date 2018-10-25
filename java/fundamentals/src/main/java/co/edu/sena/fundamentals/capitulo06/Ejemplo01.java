@@ -1,5 +1,7 @@
 package co.edu.sena.fundamentals.capitulo06;
 
+import java.util.Scanner;
+
 public class Ejemplo01 {
     public static void main(String[] args) {
         String texto = "HOLA";
@@ -19,6 +21,13 @@ public class Ejemplo01 {
         for (int i = 0; i <nombres.length ; i++) {
             System.out.println(nombres[i]);
         }
+
+        char [] arreglo = nombre.toCharArray();
+        for (int i = 0; i <arreglo.length ; i++) {
+            System.out.println(arreglo[i]);
+        }
+
+        System.out.println();
 
     }
 }
