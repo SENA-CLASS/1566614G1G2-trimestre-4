@@ -1,4 +1,4 @@
-let a =15;
+let a = 15;
 (function () {
 
 })();
