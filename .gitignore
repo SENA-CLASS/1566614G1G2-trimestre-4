@@ -37,3 +37,6 @@ dist
 .classpath
 .project
 poo/ejercicio01/ejercicio01.iml
+java/fundamentals/fundamentals.iml
+java/jpa/proyecto/proyecto.iml
+java/programming/programming.iml
