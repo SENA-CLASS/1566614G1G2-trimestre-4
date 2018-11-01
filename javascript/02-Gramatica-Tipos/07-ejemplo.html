@@ -5,6 +5,36 @@
     <title>Title</title>
 </head>
 <body>
+
+<div id="app">
+    {{ message }}
+</div>
+<div id="app-2">
+  <span :title="message">
+    Hover your mouse over me for a few seconds
+    to see my dynamically bound title!
+  </span>
+</div>
+
+
 <script src="js/ejemplo07.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            message: 'Hello enrique'
+        }
+    })
+
+    var app2 = new Vue({
+        el: '#app-2',
+        data: {
+            message: 'You loaded this page on ' + new Date().toLocaleString()
+        }
+    })
+
+</script>
+
 </body>
 </html>
