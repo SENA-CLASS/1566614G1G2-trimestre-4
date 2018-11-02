@@ -55,6 +55,9 @@
                 return false;
         }
     }
+    delete perro.duenio;
+    document.write("el dueño es: " + perro.duenio + "</br>");
+
 
     document.write(perro.raza + "</br>");
     document.write(perro.duenio.d1 + "</br>");
