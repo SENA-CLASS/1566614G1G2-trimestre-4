@@ -1,8 +1,6 @@
 package co.edu.sena.programming.capitulo07.colecciones.hashset;
 
-import java.util.HashSet;
-import java.util.Set;
-import java.util.TreeSet;
+import java.util.*;
 
 public class Ejemplo01 {
     public static void main(String[] args) {
@@ -39,6 +37,36 @@ public class Ejemplo01 {
         for (Cliente c:conjunto2) {
             System.out.println(c.toString());
         }
+
+        System.out.println("ArrayLIst");
+
+        List<Cliente> lista = new ArrayList<>();
+        lista.add(c2);
+        lista.add(c3);
+        lista.add(c3);
+        lista.add(c3);
+        lista.add(c3);
+
+        for (Cliente c:lista) {
+            System.out.println(c);
+        }
+        System.out.println("----------------------");
+
+        Queue<Cliente> cola = new ArrayDeque<>();
+        ((ArrayDeque<Cliente>) cola).push(c2);
+        ((ArrayDeque<Cliente>) cola).push(c3);
+        ((ArrayDeque<Cliente>) cola).push(c3);
+        ((ArrayDeque<Cliente>) cola).push(c3);
+        ((ArrayDeque<Cliente>) cola).removeLast();
+
+        for (Cliente c: cola) {
+            System.out.println(c.toString());
+        }
+
+
+
+
+
 
     }
 }
