@@ -16,8 +16,8 @@ public static void main(String[] args) {
             in.close();
         } catch (FileNotFoundException e) {
             System.out.println(e.getClass().getName());
-            System.out.println("ocurrio un error al crear el archivo");
-        } catch (IOException e) {
+            System.out.println("ocurrio un error buscar  el archivo");
+        } catch (IOException | NullPointerException e) {
             System.out.println(e.getClass().getName());
             System.out.println("ocurrio un erroe al leer o cerrar el archivo");
         }
