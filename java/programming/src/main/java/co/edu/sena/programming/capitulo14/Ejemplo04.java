@@ -6,6 +6,7 @@ public class Ejemplo04 {
     public static void main(String[] args) {
         Connection conexion = null;
         Statement sentencia = null;
+        ResultSet resultado = null;
         try {
             String url = "jdbc:mysql://localhost:3306/observador_de_proyectos";
             String user = "root";
@@ -13,8 +14,11 @@ public class Ejemplo04 {
             conexion = DriverManager.getConnection(url, user, pass);
 
             sentencia = conexion.createStatement();
-            String query = "select * from aprendiz";
-            ResultSet resultado = sentencia.executeQuery(query);
+            String tipoDocumento="CC";
+            String numeroDocumento= "1023907947";
+            String query = "select * from aprendiz where tipo_documento= \'"+tipoDocumento+"\' and numero_documento= \'"+numeroDocumento+"\'";
+
+            resultado = sentencia.executeQuery(query);
 
             while(resultado.next()){
                 System.out.print(resultado.getString("tipo_documento")+"\t");
@@ -30,6 +34,8 @@ public class Ejemplo04 {
             System.out.println(e.getMessage());
         } finally {
             try {
+                if(resultado!=null)
+                    resultado.close();
                 if (sentencia != null)
                     sentencia.close();
                 if (conexion != null)
