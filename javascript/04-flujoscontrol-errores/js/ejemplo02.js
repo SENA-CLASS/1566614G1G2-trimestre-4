@@ -23,3 +23,28 @@ catch (e) {
     monthName = "unknown";
     logMyErrors(e); // Pasa el objeto de la excepción a un manejador de errores
 }
+
+function f() {
+    try {
+        throw "bogus";
+    } catch (e) {
+        console.log('caught inner "bogus"');
+        throw e; // Esta sentencia throw es suspendida hasta que
+                 // el bloque finally se termine de ejecutar
+    } finally {
+        return false; // Sobreescribe la sentencia throw anterior
+    }
+    // "return false" es ejecutado ahora
+}
+
+try {
+    f();
+} catch (e) {
+    // Esta nunca es encontrada porque la sentencia throw dentro
+    // del bloque catch es sobrescrita por la sentencia return
+    // en el bloque finally
+    console.log('caught outer "bogus"');
+}
+
+// SALIDA
+// atrapado dentro de "bogus"
