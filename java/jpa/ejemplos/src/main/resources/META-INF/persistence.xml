@@ -9,7 +9,7 @@
         <class>co.edu.sena.ejemplo.domains.Cliente</class>
 
         <properties>
-            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/jpa"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/jpa?useSSL=false"/>
             <property name="javax.persistence.jdbc.user" value="root"/>
             <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
             <property name="javax.persistence.jdbc.password" value="123456789"/>
@@ -30,5 +30,6 @@
             <property name="eclipselink.logging.level.sql" value="ALL"/>
         </properties>
     </persistence-unit>
+
 
 </persistence>
