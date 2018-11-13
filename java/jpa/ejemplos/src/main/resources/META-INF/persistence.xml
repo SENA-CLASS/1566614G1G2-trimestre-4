@@ -17,5 +17,18 @@
             <property name="eclipselink.logging.level.sql" value="ALL"/>
         </properties>
     </persistence-unit>
+    <persistence-unit name="persistenceUnit2" transaction-type="RESOURCE_LOCAL">
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+        <class>co.edu.sena.ejemplo.domains.Cliente</class>
+
+        <properties>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/jp"/>
+            <property name="javax.persistence.jdbc.user" value="root"/>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+            <property name="javax.persistence.jdbc.password" value="123456789"/>
+            <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
+            <property name="eclipselink.logging.level.sql" value="ALL"/>
+        </properties>
+    </persistence-unit>
 
 </persistence>
