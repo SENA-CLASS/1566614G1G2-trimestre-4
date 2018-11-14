@@ -10,7 +10,7 @@ import javax.persistence.PersistenceException;
 public class App {
     public static void main(String[] args) {
         try {
-            EntityManagerFactory emf = Persistence.createEntityManagerFactory("persistenceUnit2");
+            EntityManagerFactory emf = Persistence.createEntityManagerFactory("unidadPersistenciaEjemploJPA");
             EntityManager em = emf.createEntityManager();
 
             Cliente cliente = new Cliente();
@@ -18,8 +18,19 @@ public class App {
             cliente.setNombre("pedro");
 
             em.getTransaction().begin();
-            em.persist(cliente);
+            em.merge(cliente);
+            cliente.setId(2);
+            cliente.setNombre("juan");
+            em.merge(cliente);
+
             em.getTransaction().commit();
+
+            System.out.println(cliente.toString());
+
+
+
+
+
 
         }catch (PersistenceException e){
             System.out.println(e.getMessage());
