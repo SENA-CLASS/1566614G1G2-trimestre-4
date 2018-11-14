@@ -1,24 +1,65 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
-             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd"
-             version="2.2">
-
-    <persistence-unit name="UPSemantica" transaction-type="RESOURCE_LOCAL">
-        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
-        <class>co.edu.sena.jpamapeo.semantica.domain.TipoDocumento</class>
-
-        <properties>
-            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/semantica?useSSL=false"/>
-            <property name="javax.persistence.jdbc.user" value="root"/>
-            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
-            <property name="javax.persistence.jdbc.password" value="123456789"/>
-            <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
-            <property name="eclipselink.logging.level.sql" value="ALL"/>
-        </properties>
-    </persistence-unit>
-
-
-
-
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="UPSemantica" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>model.Actividad</class>
+    <class>model.ActividadPlaneacion</class>
+    <class>model.Ambiente</class>
+    <class>model.Aprendiz</class>
+    <class>model.Cliente</class>
+    <class>model.ClienteHasRol</class>
+    <class>model.Competencia</class>
+    <class>model.Dia</class>
+    <class>model.DisponibilidadHoraria</class>
+    <class>model.DisponibilidadResultado</class>
+    <class>model.Especialidad</class>
+    <class>model.EspecialidadInstructor</class>
+    <class>model.EstadoFicha</class>
+    <class>model.EstadoFormacion</class>
+    <class>model.Fase</class>
+    <class>model.Ficha</class>
+    <class>model.FichaHasTrimestre</class>
+    <class>model.GrupoProyecto</class>
+    <class>model.Horario</class>
+    <class>model.Instructor</class>
+    <class>model.IntegrantesGrupo</class>
+    <class>model.ItemLista</class>
+    <class>model.Jornada</class>
+    <class>model.LimitacionAmbiente</class>
+    <class>model.ListaChequeo</class>
+    <class>model.ListaFicha</class>
+    <class>model.LogAuditoria</class>
+    <class>model.LogErrore</class>
+    <class>model.Modalidad</class>
+    <class>model.NivelFormacion</class>
+    <class>model.ObservacionGeneral</class>
+    <class>model.ObservacionRespuesta</class>
+    <class>model.Planeacion</class>
+    <class>model.PlaneacionTrimestre</class>
+    <class>model.Programa</class>
+    <class>model.Proyecto</class>
+    <class>model.RespuestaGrupo</class>
+    <class>model.ResultadoAprendizaje</class>
+    <class>model.ResultadosVisto</class>
+    <class>model.Rol</class>
+    <class>model.Sede</class>
+    <class>model.ServidorCorreoElectronico</class>
+    <class>model.TipoAmbiente</class>
+    <class>model.TipoDocumento</class>
+    <class>model.Trimestre</class>
+    <class>model.TrimestreVigente</class>
+    <class>model.Usuario</class>
+    <class>model.Valoracion</class>
+    <class>model.VersionHorario</class>
+    <class>model.Vinculacion</class>
+  
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/semantica?useSSL=false"/>
+      <property name="javax.persistence.jdbc.user" value="root"/>
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+      <property name="javax.persistence.jdbc.password" value="123456789"/>
+      <property name="javax.persistence.schema-generation.database.action" value="create"/>
+      <property name="eclipselink.logging.level.sql" value="ALL"/>
+    </properties>
+  </persistence-unit>
 </persistence>
