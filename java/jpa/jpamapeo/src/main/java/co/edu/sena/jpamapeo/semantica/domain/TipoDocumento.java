@@ -1,13 +1,20 @@
 package co.edu.sena.jpamapeo.semantica.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
-public class TipoDocumento {
+@Table(name = "tipo_documento")
+public class TipoDocumento implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
     @Id
+    @Column(name = "documento", length = 50)
     private String documento;
+    @Column(name= "descripcion", nullable = false, length = 200)
     private String descripcion;
+    @Column(name="estado", nullable = false)
     private boolean estado;
 
     public String getDocumento() {

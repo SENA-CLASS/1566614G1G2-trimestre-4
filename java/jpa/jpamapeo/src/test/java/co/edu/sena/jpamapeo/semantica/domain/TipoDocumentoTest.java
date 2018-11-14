@@ -43,9 +43,15 @@ class TipoDocumentoTest {
     }
 
     @Test
-    void miSegundaPrueba() {
-        LOGGER.info("estoy en mi segunda prueba");
-
+    void test01Update() {
+        TipoDocumento tipoDocumentoTemporal = em.find(TipoDocumento.class, "CC");
+        //tipoDocumentoTemporal.setDocumento("CCC");
+        tipoDocumentoTemporal.setDescripcion("Cedula civil colombiana");
+        tipoDocumentoTemporal.setEstado(false);
+        em.getTransaction().begin();
+        em.merge(tipoDocumentoTemporal);
+        em.getTransaction().commit();
+        assertEquals(tipoDocumentoTemporal, em.find(TipoDocumento.class, "CC"));
     }
 
 }
