@@ -1,15 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
-    <persistence-unit name="UPSemantica" transaction-type="RESOURCE_LOCAL">
-        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
-
-        <properties>
-            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/odp?useSSL=false"/>
-            <property name="javax.persistence.jdbc.user" value="root"/>
-            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
-            <property name="javax.persistence.jdbc.password" value="123456789"/>
-            <property name="javax.persistence.schema-generation.database.action" value="create"/>
-            <property name="eclipselink.logging.level.sql" value="ALL"/>
-        </properties>
-    </persistence-unit>
+  <persistence-unit name="UPSemantica" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>co.edu.sena.odp.model.entities.Trimestre</class>
+    <class>co.edu.sena.odp.model.entities.ListaChequeo</class>
+    <class>co.edu.sena.odp.model.entities.Jornada</class>
+    <class>co.edu.sena.odp.model.entities.GrupoProyecto</class>
+    <class>co.edu.sena.odp.model.entities.LogAuditoria</class>
+    <class>co.edu.sena.odp.model.entities.ServidorCorreoElectronico</class>
+    <class>co.edu.sena.odp.model.entities.Aprendiz</class>
+    <class>co.edu.sena.odp.model.entities.TipoInstructor</class>
+    <class>co.edu.sena.odp.model.entities.Usuario</class>
+    <class>co.edu.sena.odp.model.entities.Ficha</class>
+    <class>co.edu.sena.odp.model.entities.ObservacionItem</class>
+    <class>co.edu.sena.odp.model.entities.ClienteHasRol</class>
+    <class>co.edu.sena.odp.model.entities.ItemChecker</class>
+    <class>co.edu.sena.odp.model.entities.Programa</class>
+    <class>co.edu.sena.odp.model.entities.Competencia</class>
+    <class>co.edu.sena.odp.model.entities.RespuestaGrupo</class>
+    <class>co.edu.sena.odp.model.entities.ObservacionGeneral</class>
+    <class>co.edu.sena.odp.model.entities.Cliente</class>
+    <class>co.edu.sena.odp.model.entities.Rol</class>
+    <class>co.edu.sena.odp.model.entities.Rae</class>
+    <class>co.edu.sena.odp.model.entities.InstructorFicha</class>
+    <class>co.edu.sena.odp.model.entities.EstadoFormacion</class>
+    <class>co.edu.sena.odp.model.entities.FichaHasLista</class>
+    <class>co.edu.sena.odp.model.entities.TipoDocumento</class>
+    <class>co.edu.sena.odp.model.entities.Valoracion</class>
+    <class>co.edu.sena.odp.model.entities.InstructorHasTrimestre</class>
+    <class>co.edu.sena.odp.model.entities.LogError</class>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/odp?useSSL=false"/>
+      <property name="javax.persistence.jdbc.user" value="root"/>
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+      <property name="javax.persistence.jdbc.password" value="123456789"/>
+      <property name="javax.persistence.schema-generation.database.action" value="create"/>
+      <property name="eclipselink.logging.level.sql" value="ALL"/>
+    </properties>
+  </persistence-unit>
 </persistence>
