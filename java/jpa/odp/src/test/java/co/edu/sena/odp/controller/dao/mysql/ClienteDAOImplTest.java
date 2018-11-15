@@ -33,24 +33,24 @@ public class ClienteDAOImplTest {
     @Test
     public void test1Insert() {
         Cliente cliente = new Cliente();
-        cliente.setClientePK(new ClientePK("CC", "80013833"));
+        cliente.setClientePK(new ClientePK("CC", "31341234123"));
         cliente.setPrimerNombre("Hernando");
         cliente.setSegundoNombre("Enrique");
         cliente.setPrimerApellido("moreno");
         clienteDAO.insert(cliente);
-        assertEquals(cliente, clienteDAO.find(new ClientePK("CC", "80013833")));
+        assertEquals(cliente, clienteDAO.find(new ClientePK("CC", "31341234123")));
     }
 
     @Test
     public void test2Update() {
         Cliente cliente = new Cliente();
-        cliente.setClientePK(new ClientePK("CC", "80013833"));
+        cliente.setClientePK(new ClientePK("CC", "31341234123"));
         cliente.setPrimerNombre("Hernando");
         cliente.setSegundoNombre("Enrique");
         cliente.setPrimerApellido("Moreno");
         cliente.setSegundoApellido("Moreno");
         clienteDAO.update(cliente);
-        assertEquals(cliente, clienteDAO.find(new ClientePK("CC", "80013833")));
+        assertEquals(cliente, clienteDAO.find(new ClientePK("CC", "31341234123")));
     }
 
     @Test
@@ -61,13 +61,13 @@ public class ClienteDAOImplTest {
 
     @Test
     public void test4FindPrimaryKey() {
-        Cliente cliente = (Cliente) clienteDAO.find(new ClientePK("CC", "80013833"));
+        Cliente cliente = (Cliente) clienteDAO.find(new ClientePK("CC", "31341234123"));
         assertNotNull(cliente);
     }
 
     @Test
     public void test5Delete() {
-        clienteDAO.remove(clienteDAO.find(new ClientePK("CC", "80013833")));
-        assertNull( clienteDAO.find(new ClientePK("CC", "80013833")));
+        clienteDAO.remove(clienteDAO.find(new ClientePK("CC", "31341234123")));
+        assertNull( clienteDAO.find(new ClientePK("CC", "31341234123")));
     }
 }

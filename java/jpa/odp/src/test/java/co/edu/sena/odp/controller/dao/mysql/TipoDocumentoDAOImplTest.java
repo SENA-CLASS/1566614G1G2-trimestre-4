@@ -31,21 +31,21 @@ public class TipoDocumentoDAOImplTest {
     @Test
     public void test1Insert() {
         TipoDocumento tipoDocumento = new TipoDocumento();
-        tipoDocumento.setDocumento("CC");
+        tipoDocumento.setDocumento("CC2");
         tipoDocumento.setDescripcion("Cedula de Ciudadania");
         tipoDocumento.setEstado(true);
         daoTipoDocumento.insert(tipoDocumento);
-        assertEquals(tipoDocumento, daoTipoDocumento.find("CC"));
+        assertEquals(tipoDocumento, daoTipoDocumento.find("CC2"));
     }
 
     @Test
     public void test2UPdate() {
         TipoDocumento tipoDocumento = new TipoDocumento();
-        tipoDocumento.setDocumento("CC");
+        tipoDocumento.setDocumento("CC3");
         tipoDocumento.setDescripcion("Cedula de Ciudadania 2");
         tipoDocumento.setEstado(false);
         daoTipoDocumento.update(tipoDocumento);
-        assertEquals(tipoDocumento, daoTipoDocumento.find("CC"));
+        assertEquals(tipoDocumento, daoTipoDocumento.find("CC3"));
     }
 
     @Test
@@ -56,13 +56,13 @@ public class TipoDocumentoDAOImplTest {
 
     @Test
     public void test4FindByPrimaryKey() {
-        TipoDocumento tipoDocumento = (TipoDocumento) daoTipoDocumento.find("CC");
+        TipoDocumento tipoDocumento = (TipoDocumento) daoTipoDocumento.find("CC2");
         assertNotNull(tipoDocumento);
     }
 
     @Test
     public void test5Delete() {
-        daoTipoDocumento.remove(daoTipoDocumento.find("CC"));
-        assertNull(daoTipoDocumento.find("CC"));
+        daoTipoDocumento.remove(daoTipoDocumento.find("CC2"));
+        assertNull(daoTipoDocumento.find("CC2"));
     }
 }
