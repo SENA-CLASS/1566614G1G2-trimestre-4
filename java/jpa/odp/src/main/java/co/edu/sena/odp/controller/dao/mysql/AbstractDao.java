@@ -34,7 +34,7 @@ public abstract class AbstractDao<T> {
     }
 
     protected EntityManager getEntityManager() {
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("odpPersistenceUnit");
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("UPSemantica");
         this.em = emf.createEntityManager();
         return this.em;
     }
