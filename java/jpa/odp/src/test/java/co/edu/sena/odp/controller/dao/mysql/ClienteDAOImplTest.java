@@ -4,32 +4,34 @@ import co.edu.sena.odp.controller.dao.ClienteDAO;
 import co.edu.sena.odp.controller.factory.DAOFactory;
 import co.edu.sena.odp.model.entities.Cliente;
 import co.edu.sena.odp.model.entities.ClientePK;
-import co.edu.sena.odp.model.entities.TipoDocumento;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.FixMethodOrder;
+import org.junit.Test;
+import org.junit.runners.MethodSorters;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static junit.framework.TestCase.assertNull;
+import static org.junit.Assert.*;
 
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+public class ClienteDAOImplTest {
 
-
-class ClienteDAOImplTest {
 
     private ClienteDAO clienteDAO;
 
-    @BeforeEach
-    void setUp() {
+    @Before
+    public void setUp() {
         clienteDAO= DAOFactory.crearClienteDAO();
     }
 
-    @AfterEach
-    void tearDown() {
+    @After
+    public void tearDown() {
     }
 
     @Test
-    void test1Insert() {
+    public void test1Insert() {
         Cliente cliente = new Cliente();
         cliente.setClientePK(new ClientePK("CC", "80013833"));
         cliente.setPrimerNombre("Hernando");
@@ -40,7 +42,7 @@ class ClienteDAOImplTest {
     }
 
     @Test
-    void test2Update() {
+    public void test2Update() {
         Cliente cliente = new Cliente();
         cliente.setClientePK(new ClientePK("CC", "80013833"));
         cliente.setPrimerNombre("Hernando");
@@ -52,19 +54,19 @@ class ClienteDAOImplTest {
     }
 
     @Test
-    void test3FindAll() {
+    public void test3FindAll() {
         List<Cliente> lista = (List<Cliente>) clienteDAO.findAll();
         assertFalse(lista.isEmpty());
     }
 
     @Test
-    void test4FindPrimaryKey() {
+    public void test4FindPrimaryKey() {
         Cliente cliente = (Cliente) clienteDAO.find(new ClientePK("CC", "80013833"));
         assertNotNull(cliente);
     }
 
     @Test
-    void test5Delete() {
+    public void test5Delete() {
         clienteDAO.remove(clienteDAO.find(new ClientePK("CC", "80013833")));
         assertNull( clienteDAO.find(new ClientePK("CC", "80013833")));
     }

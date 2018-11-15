@@ -3,28 +3,33 @@ package co.edu.sena.odp.controller.dao.mysql;
 import co.edu.sena.odp.controller.dao.TipoDocumentoDAO;
 import co.edu.sena.odp.controller.factory.DAOFactory;
 import co.edu.sena.odp.model.entities.TipoDocumento;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.FixMethodOrder;
+import org.junit.Test;
+import org.junit.runners.MethodSorters;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static junit.framework.TestCase.assertNull;
+import static org.junit.Assert.*;
 
-class TipoDocumentoDAOImplTest {
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+public class TipoDocumentoDAOImplTest {
+
     private TipoDocumentoDAO daoTipoDocumento;
 
-    @BeforeEach
-    void setUp() {
+    @Before
+    public void setUp() {
         daoTipoDocumento = DAOFactory.crearTipoDocumentoDAO();
     }
 
-    @AfterEach
-    void tearDown() {
+    @After
+    public void tearDown() {
     }
 
     @Test
-    void test1Insert() {
+    public void test1Insert() {
         TipoDocumento tipoDocumento = new TipoDocumento();
         tipoDocumento.setDocumento("CC");
         tipoDocumento.setDescripcion("Cedula de Ciudadania");
@@ -34,7 +39,7 @@ class TipoDocumentoDAOImplTest {
     }
 
     @Test
-    void test2UPdate() {
+    public void test2UPdate() {
         TipoDocumento tipoDocumento = new TipoDocumento();
         tipoDocumento.setDocumento("CC");
         tipoDocumento.setDescripcion("Cedula de Ciudadania 2");
@@ -44,19 +49,19 @@ class TipoDocumentoDAOImplTest {
     }
 
     @Test
-    void test3FindAll() {
+    public void test3FindAll() {
         List<TipoDocumento> lista =(List<TipoDocumento>) daoTipoDocumento.findAll();
         assertFalse(lista.isEmpty());
     }
 
     @Test
-    void test4FindByPrimaryKey() {
+    public void test4FindByPrimaryKey() {
         TipoDocumento tipoDocumento = (TipoDocumento) daoTipoDocumento.find("CC");
         assertNotNull(tipoDocumento);
     }
 
     @Test
-    void test5Delete() {
+    public void test5Delete() {
         daoTipoDocumento.remove(daoTipoDocumento.find("CC"));
         assertNull(daoTipoDocumento.find("CC"));
     }
