@@ -44,13 +44,7 @@ class TipoDocumentoDAOImplTest {
     }
 
     @Test
-    void test3UpdatePrimeyKey() {
-        // TODO: falta implementar
-
-    }
-
-    @Test
-    void test4FindAll() {
+    void test3FindAll() {
         List<TipoDocumento> lista =(List<TipoDocumento>) daoTipoDocumento.findAll();
         assertFalse(lista.isEmpty());
     }
@@ -59,5 +53,11 @@ class TipoDocumentoDAOImplTest {
     void test4FindByPrimaryKey() {
         TipoDocumento tipoDocumento = (TipoDocumento) daoTipoDocumento.find("CC");
         assertNotNull(tipoDocumento);
+    }
+
+    @Test
+    void test5Delete() {
+        daoTipoDocumento.remove(daoTipoDocumento.find("CC"));
+        assertNull(daoTipoDocumento.find("CC"));
     }
 }
