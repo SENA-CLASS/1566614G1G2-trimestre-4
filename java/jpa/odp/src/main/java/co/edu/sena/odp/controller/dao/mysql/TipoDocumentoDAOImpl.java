@@ -61,10 +61,10 @@ public class TipoDocumentoDAOImpl extends AbstractDao<TipoDocumento> implements 
     }
 
     @Override
-    public List<TipoDocumento> findByLikeEstado(String estado) throws PersistenceException {
+    public List<TipoDocumento> findByLikeDescripcionNative(String descripcion) throws PersistenceException {
             this.getEntityManager();
-            Query query = this.em.createNativeQuery("SELECT * FROM observador_de_proyectos.tipo_documento t where t.estado like ?");
-            query.setParameter(1, estado);
+            Query query = this.em.createNativeQuery("SELECT * FROM observador_de_proyectos.tipo_documento t where t.descripcion like ?");
+            query.setParameter(1, descripcion);
             return query.getResultList();
     }
 
