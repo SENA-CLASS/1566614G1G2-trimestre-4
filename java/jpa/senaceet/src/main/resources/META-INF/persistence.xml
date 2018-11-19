@@ -2,7 +2,56 @@
 <persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
   <persistence-unit name="UPTecnica" transaction-type="RESOURCE_LOCAL">
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
-
+    <class>co.edu.sena.senaceet.model.entities.Especialidad</class>
+    <class>co.edu.sena.senaceet.model.entities.VersionHorario</class>
+    <class>co.edu.sena.senaceet.model.entities.Horario</class>
+    <class>co.edu.sena.senaceet.model.entities.Cliente</class>
+    <class>co.edu.sena.senaceet.model.entities.ClienteHasRol</class>
+    <class>co.edu.sena.senaceet.model.entities.EstadoFormacion</class>
+    <class>co.edu.sena.senaceet.model.entities.EstadoFicha</class>
+    <class>co.edu.sena.senaceet.model.entities.TipoDocumento</class>
+    <class>co.edu.sena.senaceet.model.entities.TrimestreVigente</class>
+    <class>co.edu.sena.senaceet.model.entities.ObservacionRespuesta</class>
+    <class>co.edu.sena.senaceet.model.entities.TipoAmbiente</class>
+    <class>co.edu.sena.senaceet.model.entities.Actividad</class>
+    <class>co.edu.sena.senaceet.model.entities.Aprendiz</class>
+    <class>co.edu.sena.senaceet.model.entities.RespuestaGrupo</class>
+    <class>co.edu.sena.senaceet.model.entities.GrupoProyecto</class>
+    <class>co.edu.sena.senaceet.model.entities.ResultadoAprendizaje</class>
+    <class>co.edu.sena.senaceet.model.entities.DisponibilidadHoraria</class>
+    <class>co.edu.sena.senaceet.model.entities.ListaFicha</class>
+    <class>co.edu.sena.senaceet.model.entities.Fase</class>
+    <class>co.edu.sena.senaceet.model.entities.Programa</class>
+    <class>co.edu.sena.senaceet.model.entities.LimitacionAmbiente</class>
+    <class>co.edu.sena.senaceet.model.entities.Proyecto</class>
+    <class>co.edu.sena.senaceet.model.entities.Vinculacion</class>
+    <class>co.edu.sena.senaceet.model.entities.FichaHasTrimestre</class>
+    <class>co.edu.sena.senaceet.model.entities.PlaneacionTrimestre</class>
+    <class>co.edu.sena.senaceet.model.entities.NivelFormacion</class>
+    <class>co.edu.sena.senaceet.model.entities.ObservacionGeneral</class>
+    <class>co.edu.sena.senaceet.model.entities.LogAuditoria</class>
+    <class>co.edu.sena.senaceet.model.entities.ResultadosVistos</class>
+    <class>co.edu.sena.senaceet.model.entities.ActividadPlaneacion</class>
+    <class>co.edu.sena.senaceet.model.entities.ListaChequeo</class>
+    <class>co.edu.sena.senaceet.model.entities.DisponibilidadResultados</class>
+    <class>co.edu.sena.senaceet.model.entities.ItemLista</class>
+    <class>co.edu.sena.senaceet.model.entities.Modalidad</class>
+    <class>co.edu.sena.senaceet.model.entities.Usuario</class>
+    <class>co.edu.sena.senaceet.model.entities.Rol</class>
+    <class>co.edu.sena.senaceet.model.entities.Competencia</class>
+    <class>co.edu.sena.senaceet.model.entities.Jornada</class>
+    <class>co.edu.sena.senaceet.model.entities.EspecialidadInstructor</class>
+    <class>co.edu.sena.senaceet.model.entities.LogErrores</class>
+    <class>co.edu.sena.senaceet.model.entities.ServidorCorreoElectronico</class>
+    <class>co.edu.sena.senaceet.model.entities.Trimestre</class>
+    <class>co.edu.sena.senaceet.model.entities.IntegrantesGrupo</class>
+    <class>co.edu.sena.senaceet.model.entities.Instructor</class>
+    <class>co.edu.sena.senaceet.model.entities.Ficha</class>
+    <class>co.edu.sena.senaceet.model.entities.Valoracion</class>
+    <class>co.edu.sena.senaceet.model.entities.Planeacion</class>
+    <class>co.edu.sena.senaceet.model.entities.Dia</class>
+    <class>co.edu.sena.senaceet.model.entities.Ambiente</class>
+    <class>co.edu.sena.senaceet.model.entities.Sede</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/senaceet2?useSSL=false"/>
       <property name="javax.persistence.jdbc.user" value="root"/>
