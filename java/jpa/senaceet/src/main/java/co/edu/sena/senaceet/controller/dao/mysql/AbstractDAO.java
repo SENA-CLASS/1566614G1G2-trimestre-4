@@ -6,7 +6,6 @@
 package co.edu.sena.senaceet.controller.dao.mysql;
 
 import java.util.Collection;
-import java.util.List;
 import java.util.logging.Logger;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -17,9 +16,9 @@ import javax.persistence.PersistenceException;
  *
  * @author Enrique
  */
-public abstract class AbstractDao<T> {
+public abstract class AbstractDAO<T> {
 
-    private static final Logger LOGGER = Logger.getLogger(AbstractDao.class.getName());
+    private static final Logger LOGGER = Logger.getLogger(AbstractDAO.class.getName());
 
     protected EntityManager em;
     private Class<T> entityClass;
@@ -29,12 +28,12 @@ public abstract class AbstractDao<T> {
         em.getEntityManagerFactory().getCache().evictAll();
     }
 
-    public AbstractDao(Class<T> entityClass) {
+    public AbstractDAO(Class<T> entityClass) {
         this.entityClass = entityClass;
     }
 
     protected EntityManager getEntityManager() {
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("UPSemantica");
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("UPTecnica");
         this.em = emf.createEntityManager();
         return this.em;
     }
