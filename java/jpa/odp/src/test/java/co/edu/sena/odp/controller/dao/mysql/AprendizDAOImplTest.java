@@ -8,6 +8,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.util.List;
+import java.util.Optional;
 
 import static org.junit.Assert.*;
 
@@ -54,5 +55,14 @@ public class AprendizDAOImplTest {
     public void findAll() {
         List<Aprendiz> lista = (List<Aprendiz>) aprendizDAO.findAll();
         assertFalse(lista.isEmpty());
+    }
+
+    @Test
+    public void findByPrimaryKey() {
+        Aprendiz aprendiz = aprendizDAO.find(new AprendizPK("CC","80013833","1566614G1",2));
+        Optional<Aprendiz> aprendizOptional= Optional.of(aprendiz);
+        if(aprendizOptional.isPresent()){
+            assertNotNull(aprendiz);
+        }
     }
 }
