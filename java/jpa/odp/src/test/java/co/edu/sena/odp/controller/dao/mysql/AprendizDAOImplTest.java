@@ -11,8 +11,11 @@ import static org.junit.Assert.*;
 
 public class AprendizDAOImplTest {
 
+    private AprendizDAO aprendizDAO;
+
     @Before
     public void setUp() throws Exception {
+        aprendizDAO = DAOFactory.crearAprendizDAO();
     }
 
     @After
@@ -24,7 +27,16 @@ public class AprendizDAOImplTest {
         Aprendiz aprendiz = new Aprendiz();
         aprendiz.setAprendizPK(new AprendizPK("CC", "80013833", "1566614G1",1));
         aprendiz.setEstado(new EstadoFormacion("Desertado"));
-        AprendizDAO aprendizDAO = DAOFactory.crearAprendizDAO();
+
         aprendizDAO.insert(aprendiz);
+        assertEquals(aprendiz, aprendizDAO.find(new AprendizPK("CC", "80013833", "1566614G1",1)));
+    }
+
+    @Test
+    public void test2Update() {
+        Aprendiz aprendiz = aprendizDAO.find(new AprendizPK("CC", "80013833", "1566614G1",1));
+        aprendiz.setEstado(new EstadoFormacion("En etapa productiva"));
+        aprendizDAO.update(aprendiz);
+        assertEquals(aprendiz, aprendizDAO.find(new AprendizPK("CC", "80013833", "1566614G1",1)));
     }
 }
