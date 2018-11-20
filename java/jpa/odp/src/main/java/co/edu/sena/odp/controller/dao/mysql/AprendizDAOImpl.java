@@ -25,14 +25,13 @@ public class AprendizDAOImpl extends AbstractDao<Aprendiz> implements AprendizDA
                     "a.aprendizPK.ficha= :fichaVieja AND " +
                     "a.aprendizPK.grupoCodigo = :grupoCodigoViejo"); //JPQL
             query.setParameter("tipoDocumentoNuevo", llaveNueva.getTipoDocumento());
-            query.setParameter("numeroDocumentoNuevo", llaveNueva.getTipoDocumento());
+            query.setParameter("numeroDocumentoNuevo", llaveNueva.getNumeroDocumento());
             query.setParameter("numeroFichaNuevo", llaveNueva.getFicha());
             query.setParameter("grupoCodigoNuevo", llaveNueva.getGrupoCodigo());
             query.setParameter("tipoDocumentoViejo", llaveVieja.getTipoDocumento());
             query.setParameter("numeroDocumentoViejo", llaveVieja.getNumeroDocumento() );
             query.setParameter("grupoCodigoViejo", llaveVieja.getGrupoCodigo());
             query.setParameter("fichaVieja", llaveVieja.getFicha());
-
             this.em.getTransaction().begin();
             int res =query.executeUpdate();
             this.em.getTransaction().commit();

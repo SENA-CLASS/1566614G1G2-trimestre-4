@@ -39,4 +39,12 @@ public class AprendizDAOImplTest {
         aprendizDAO.update(aprendiz);
         assertEquals(aprendiz, aprendizDAO.find(new AprendizPK("CC", "80013833", "1566614G1",1)));
     }
+
+    @Test
+    public void test3UpdatePrimaryKey() {
+        Aprendiz aprendiz = aprendizDAO.find(new AprendizPK("CC", "80013833", "1566614G1",1));
+        AprendizPK llaveNueva =new AprendizPK("CC","80013833","1566614G1",2);
+        aprendizDAO.updatePrimaryKey(aprendiz.getAprendizPK(),llaveNueva);
+        assertEquals(aprendizDAO.find(llaveNueva).getAprendizPK(),llaveNueva);
+    }
 }

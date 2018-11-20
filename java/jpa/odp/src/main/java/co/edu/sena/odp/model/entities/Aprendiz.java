@@ -6,15 +6,7 @@
 package co.edu.sena.odp.model.entities;
 
 import java.io.Serializable;
-import javax.persistence.EmbeddedId;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinColumns;
-import javax.persistence.ManyToOne;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 /**
  *
@@ -34,17 +26,17 @@ public class Aprendiz implements Serializable {
     @EmbeddedId
     protected AprendizPK aprendizPK;
     @JoinColumn(name = "estado", referencedColumnName = "id_estado", nullable = false)
-    @ManyToOne(optional = false, fetch = FetchType.LAZY)
+    @ManyToOne(optional = false, fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private EstadoFormacion estado;
     @JoinColumns({
         @JoinColumn(name = "ficha", referencedColumnName = "numero_ficha", nullable = false, insertable = false, updatable = false)
         , @JoinColumn(name = "grupo_codigo", referencedColumnName = "codigo", nullable = false, insertable = false, updatable = false)})
-    @ManyToOne(optional = false, fetch = FetchType.LAZY)
+    @ManyToOne(optional = false, fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private GrupoProyecto grupoProyecto;
     @JoinColumns({
         @JoinColumn(name = "tipo_documento", referencedColumnName = "tipo_documento", nullable = false, insertable = false, updatable = false)
         , @JoinColumn(name = "numero_documento", referencedColumnName = "numero_documento", nullable = false, insertable = false, updatable = false)})
-    @ManyToOne(optional = false, fetch = FetchType.LAZY)
+    @ManyToOne(optional = false, fetch = FetchType.LAZY,  cascade = CascadeType.ALL)
     private Cliente cliente;
 
     public Aprendiz() {
