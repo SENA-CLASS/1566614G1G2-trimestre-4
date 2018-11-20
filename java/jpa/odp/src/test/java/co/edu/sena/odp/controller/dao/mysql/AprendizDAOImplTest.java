@@ -7,6 +7,8 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.List;
+
 import static org.junit.Assert.*;
 
 public class AprendizDAOImplTest {
@@ -46,5 +48,11 @@ public class AprendizDAOImplTest {
         AprendizPK llaveNueva =new AprendizPK("CC","80013833","1566614G1",2);
         aprendizDAO.updatePrimaryKey(aprendiz.getAprendizPK(),llaveNueva);
         assertEquals(aprendizDAO.find(llaveNueva).getAprendizPK(),llaveNueva);
+    }
+
+    @Test
+    public void findAll() {
+        List<Aprendiz> lista = (List<Aprendiz>) aprendizDAO.findAll();
+        assertFalse(lista.isEmpty());
     }
 }
