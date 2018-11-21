@@ -30,7 +30,7 @@
     <class>co.edu.sena.odp.model.entities.InstructorHasTrimestre</class>
     <class>co.edu.sena.odp.model.entities.LogError</class>
     <properties>
-      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/observador_de_proyectos?useSSL=false"/>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/odp?useSSL=false"/>
       <property name="javax.persistence.jdbc.user" value="root"/>
       <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
       <property name="javax.persistence.jdbc.password" value="123456789"/>
