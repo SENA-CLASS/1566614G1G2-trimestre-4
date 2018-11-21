@@ -7,6 +7,7 @@ package co.edu.sena.senaceet2.domain;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.time.LocalDate;
 import java.util.Collection;
 import java.util.Date;
 
@@ -17,8 +18,7 @@ import java.util.Date;
 @Entity
 @Table(name = "ficha", uniqueConstraints = {
     @UniqueConstraint(columnNames = {"id_programa", "numero_ficha"})})
-@NamedQueries({
-    @NamedQuery(name = "Ficha.findAll", query = "SELECT f FROM Ficha f")})
+
 public class Ficha implements Serializable {
 
     private static final long serialVersionUID = 1L;

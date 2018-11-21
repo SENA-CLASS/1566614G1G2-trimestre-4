@@ -16,8 +16,6 @@ import java.util.Collection;
 @Entity
 @Table(name = "actividad", uniqueConstraints = {
     @UniqueConstraint(columnNames = {"id_fase", "numero_actividad"})})
-@NamedQueries({
-    @NamedQuery(name = "Actividad.findAll", query = "SELECT a FROM Actividad a")})
 public class Actividad implements Serializable {
 
     private static final long serialVersionUID = 1L;
