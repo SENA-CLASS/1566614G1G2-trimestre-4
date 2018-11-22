@@ -16,8 +16,6 @@ import java.util.Collection;
 @Entity
 @Table(name = "tipo_documento", uniqueConstraints = {
     @UniqueConstraint(columnNames = {"sigla"})})
-@NamedQueries({
-    @NamedQuery(name = "TipoDocumento.findAll", query = "SELECT t FROM TipoDocumento t")})
 public class TipoDocumento implements Serializable {
 
     private static final long serialVersionUID = 1L;
