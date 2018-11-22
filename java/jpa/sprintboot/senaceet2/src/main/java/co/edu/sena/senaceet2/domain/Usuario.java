@@ -7,6 +7,7 @@ package co.edu.sena.senaceet2.domain;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.time.LocalDate;
 import java.util.Collection;
 import java.util.Date;
 
@@ -18,8 +19,6 @@ import java.util.Date;
 @Table(name = "usuario", uniqueConstraints = {
     @UniqueConstraint(columnNames = {"id_cliente"}),
     @UniqueConstraint(columnNames = {"correo"})})
-@NamedQueries({
-    @NamedQuery(name = "Usuario.findAll", query = "SELECT u FROM Usuario u")})
 public class Usuario implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -36,8 +35,8 @@ public class Usuario implements Serializable {
     private String password;
     @Basic(optional = false)
     @Column(name = "fecha_terminacion", nullable = false)
-    @Temporal(TemporalType.DATE)
-    private Date fechaTerminacion;
+    //@Temporal(TemporalType.DATE)
+    private LocalDate fechaTerminacion;
     @Column(name = "url_foto", length = 255)
     private String urlFoto;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "idUsuario", fetch = FetchType.LAZY)
@@ -59,7 +58,7 @@ public class Usuario implements Serializable {
         this.id = id;
     }
 
-    public Usuario(Integer id, String correo, String password, Date fechaTerminacion) {
+    public Usuario(Integer id, String correo, String password, LocalDate fechaTerminacion) {
         this.id = id;
         this.correo = correo;
         this.password = password;
@@ -90,11 +89,11 @@ public class Usuario implements Serializable {
         this.password = password;
     }
 
-    public Date getFechaTerminacion() {
+    public LocalDate getFechaTerminacion() {
         return fechaTerminacion;
     }
 
-    public void setFechaTerminacion(Date fechaTerminacion) {
+    public void setFechaTerminacion(LocalDate fechaTerminacion) {
         this.fechaTerminacion = fechaTerminacion;
     }
 

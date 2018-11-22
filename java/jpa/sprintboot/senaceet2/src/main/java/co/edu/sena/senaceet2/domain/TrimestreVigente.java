@@ -7,6 +7,7 @@ package co.edu.sena.senaceet2.domain;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.time.LocalDate;
 import java.util.Collection;
 import java.util.Date;
 
@@ -17,8 +18,6 @@ import java.util.Date;
 @Entity
 @Table(name = "trimestre_vigente", uniqueConstraints = {
     @UniqueConstraint(columnNames = {"anio", "trimestre_programado"})})
-@NamedQueries({
-    @NamedQuery(name = "TrimestreVigente.findAll", query = "SELECT t FROM TrimestreVigente t")})
 public class TrimestreVigente implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -29,19 +28,16 @@ public class TrimestreVigente implements Serializable {
     private Integer id;
     @Basic(optional = false)
     @Column(name = "anio", nullable = false)
-    @Temporal(TemporalType.DATE)
-    private Date anio;
+    private int anio;
     @Basic(optional = false)
     @Column(name = "trimestre_programado", nullable = false)
     private int trimestreProgramado;
     @Basic(optional = false)
     @Column(name = "fecha_inicio", nullable = false)
-    @Temporal(TemporalType.DATE)
-    private Date fechaInicio;
+    private LocalDate fechaInicio;
     @Basic(optional = false)
     @Column(name = "fecha_fin", nullable = false)
-    @Temporal(TemporalType.DATE)
-    private Date fechaFin;
+    private LocalDate fechaFin;
     @Basic(optional = false)
     @Column(name = "estado", nullable = false, length = 40)
     private String estado;
@@ -55,7 +51,7 @@ public class TrimestreVigente implements Serializable {
         this.id = id;
     }
 
-    public TrimestreVigente(Integer id, Date anio, int trimestreProgramado, Date fechaInicio, Date fechaFin, String estado) {
+    public TrimestreVigente(Integer id, int anio, int trimestreProgramado, LocalDate fechaInicio, LocalDate fechaFin, String estado) {
         this.id = id;
         this.anio = anio;
         this.trimestreProgramado = trimestreProgramado;
@@ -72,11 +68,11 @@ public class TrimestreVigente implements Serializable {
         this.id = id;
     }
 
-    public Date getAnio() {
+    public int getAnio() {
         return anio;
     }
 
-    public void setAnio(Date anio) {
+    public void setAnio(int anio) {
         this.anio = anio;
     }
 
@@ -88,19 +84,19 @@ public class TrimestreVigente implements Serializable {
         this.trimestreProgramado = trimestreProgramado;
     }
 
-    public Date getFechaInicio() {
+    public LocalDate getFechaInicio() {
         return fechaInicio;
     }
 
-    public void setFechaInicio(Date fechaInicio) {
+    public void setFechaInicio(LocalDate fechaInicio) {
         this.fechaInicio = fechaInicio;
     }
 
-    public Date getFechaFin() {
+    public LocalDate getFechaFin() {
         return fechaFin;
     }
 
-    public void setFechaFin(Date fechaFin) {
+    public void setFechaFin(LocalDate fechaFin) {
         this.fechaFin = fechaFin;
     }
 

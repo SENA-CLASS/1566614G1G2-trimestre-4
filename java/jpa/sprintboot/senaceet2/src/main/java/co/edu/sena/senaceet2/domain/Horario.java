@@ -7,6 +7,7 @@ package co.edu.sena.senaceet2.domain;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.time.LocalTime;
 import java.util.Date;
 
 /**
@@ -28,12 +29,10 @@ public class Horario implements Serializable {
     private Integer id;
     @Basic(optional = false)
     @Column(name = "hora_inicio", nullable = false)
-    @Temporal(TemporalType.TIME)
-    private Date horaInicio;
+    private LocalTime horaInicio;
     @Basic(optional = false)
     @Column(name = "hora_fin", nullable = false)
-    @Temporal(TemporalType.TIME)
-    private Date horaFin;
+    private LocalTime horaFin;
     @JoinColumn(name = "id_ambiente", referencedColumnName = "id", nullable = false)
     @ManyToOne(optional = false, fetch = FetchType.LAZY)
     private Ambiente idAmbiente;
@@ -60,7 +59,7 @@ public class Horario implements Serializable {
         this.id = id;
     }
 
-    public Horario(Integer id, Date horaInicio, Date horaFin) {
+    public Horario(Integer id, LocalTime horaInicio, LocalTime horaFin) {
         this.id = id;
         this.horaInicio = horaInicio;
         this.horaFin = horaFin;
@@ -74,19 +73,19 @@ public class Horario implements Serializable {
         this.id = id;
     }
 
-    public Date getHoraInicio() {
+    public LocalTime getHoraInicio() {
         return horaInicio;
     }
 
-    public void setHoraInicio(Date horaInicio) {
+    public void setHoraInicio(LocalTime horaInicio) {
         this.horaInicio = horaInicio;
     }
 
-    public Date getHoraFin() {
+    public LocalTime getHoraFin() {
         return horaFin;
     }
 
-    public void setHoraFin(Date horaFin) {
+    public void setHoraFin(LocalTime horaFin) {
         this.horaFin = horaFin;
     }
 
