@@ -24,7 +24,7 @@ import java.time.Instant;
  * A user.
  */
 @Entity
-@Table(name = "user")
+@Table(name = "jhi_user")
 @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
 public class User extends AbstractAuditingEntity implements Serializable {
 
