@@ -38,6 +38,12 @@ public class CacheConfiguration {
             cm.createCache(co.edu.sena.senaceet.domain.User.class.getName(), jcacheConfiguration);
             cm.createCache(co.edu.sena.senaceet.domain.Authority.class.getName(), jcacheConfiguration);
             cm.createCache(co.edu.sena.senaceet.domain.User.class.getName() + ".authorities", jcacheConfiguration);
+            cm.createCache(co.edu.sena.senaceet.domain.TipoDocumento.class.getName(), jcacheConfiguration);
+            cm.createCache(co.edu.sena.senaceet.domain.TipoDocumento.class.getName() + ".clientes", jcacheConfiguration);
+            cm.createCache(co.edu.sena.senaceet.domain.Cliente.class.getName(), jcacheConfiguration);
+            cm.createCache(co.edu.sena.senaceet.domain.Proyecto.class.getName(), jcacheConfiguration);
+            cm.createCache(co.edu.sena.senaceet.domain.Proyecto.class.getName() + ".fases", jcacheConfiguration);
+            cm.createCache(co.edu.sena.senaceet.domain.Fase.class.getName(), jcacheConfiguration);
             // jhipster-needle-ehcache-add-entry
         };
     }
