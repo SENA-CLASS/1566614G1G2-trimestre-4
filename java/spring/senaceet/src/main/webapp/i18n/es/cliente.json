@@ -1,0 +1,27 @@
+{
+  "senaceetApp": {
+    "cliente": {
+      "home": {
+        "title": "Clientes",
+        "createLabel": "Crear nuevo Cliente",
+        "createOrEditLabel": "Crear o editar Cliente"
+      },
+      "created": "Un nuevo Cliente ha sido creado con el identificador {{ param }}",
+      "updated": "Un Cliente ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Cliente ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Cliente {{ id }}?"
+      },
+      "detail": {
+        "title": "Cliente"
+      },
+      "numeroDocumento": "Numero Documento",
+      "primerNombre": "Primer Nombre",
+      "segundoNombre": "Segundo Nombre",
+      "primerApellido": "Primer Apellido",
+      "segundoApellido": "Segundo Apellido",
+      "tipoDocumento": "Tipo Documento",
+      "user": "User"
+    }
+  }
+}

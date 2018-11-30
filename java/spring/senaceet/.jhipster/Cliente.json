@@ -1,0 +1,76 @@
+{
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipValidateRules": "required",
+            "relationshipName": "tipoDocumento",
+            "otherEntityName": "tipoDocumento",
+            "otherEntityField": "nombreDocumento"
+        },
+        {
+            "relationshipName": "user",
+            "otherEntityName": "user",
+            "relationshipType": "one-to-one",
+            "relationshipValidateRules": [
+                "required"
+            ],
+            "otherEntityField": "login",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "cliente"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "numeroDocumento",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 50
+        },
+        {
+            "fieldName": "primerNombre",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 50
+        },
+        {
+            "fieldName": "segundoNombre",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 50
+        },
+        {
+            "fieldName": "primerApellido",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 50
+        },
+        {
+            "fieldName": "segundoApellido",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 50
+        }
+    ],
+    "changelogDate": "20181130121346",
+    "dto": "no",
+    "searchEngine": false,
+    "service": "serviceClass",
+    "entityTableName": "cliente",
+    "jpaMetamodelFiltering": false,
+    "pagination": "pagination"
+}

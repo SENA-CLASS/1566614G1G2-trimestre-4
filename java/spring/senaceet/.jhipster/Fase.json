@@ -1,0 +1,47 @@
+{
+    "name": "Fase",
+    "fields": [
+        {
+            "fieldName": "nombre",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 40
+        },
+        {
+            "fieldName": "estado",
+            "fieldType": "Estado",
+            "fieldValues": "ACTIVO,INACTIVO",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "hora",
+            "fieldType": "ZonedDateTime",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipValidateRules": "required",
+            "relationshipName": "proyecto",
+            "otherEntityName": "proyecto",
+            "otherEntityField": "codigo"
+        }
+    ],
+    "changelogDate": "20181130121348",
+    "entityTableName": "fase",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

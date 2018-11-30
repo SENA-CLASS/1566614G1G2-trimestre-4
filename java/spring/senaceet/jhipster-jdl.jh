@@ -1,0 +1,41 @@
+enum Estado{
+	ACTIVO, INACTIVO
+}
+
+entity TipoDocumento{
+	sigla String required maxlength(10) unique,
+    nombreDocumento String required maxlength(50),
+    estado Estado required
+}
+
+entity Cliente{
+	numeroDocumento String required maxlength(50),
+    primerNombre String required maxlength(50),
+    segundoNombre String maxlength(50),
+    primerApellido String required maxlength(50),
+    segundoApellido String maxlength(50)
+}
+
+relationship OneToMany{
+	TipoDocumento to Cliente{tipoDocumento(nombreDocumento) required}
+}
+
+entity Proyecto{
+	codigo String required maxlength(40),
+	nombre String required maxlength(500),
+    estado Estado required
+}
+
+entity Fase{
+	nombre String required maxlength(40),
+    estado Estado required,
+    hora ZonedDateTime required
+}
+
+relationship OneToMany{
+	Proyecto{fases} to Fase{proyecto(codigo) required}
+}
+
+service * with serviceClass
+paginate * with pagination
+//search A with elasticsearch

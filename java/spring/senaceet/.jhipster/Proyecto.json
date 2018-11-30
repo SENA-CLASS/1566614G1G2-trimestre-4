@@ -1,0 +1,48 @@
+{
+    "name": "Proyecto",
+    "fields": [
+        {
+            "fieldName": "codigo",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 40
+        },
+        {
+            "fieldName": "nombre",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 500
+        },
+        {
+            "fieldName": "estado",
+            "fieldType": "Estado",
+            "fieldValues": "ACTIVO,INACTIVO",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "fases",
+            "otherEntityName": "fase",
+            "otherEntityRelationshipName": "proyecto"
+        }
+    ],
+    "changelogDate": "20181130121347",
+    "entityTableName": "proyecto",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

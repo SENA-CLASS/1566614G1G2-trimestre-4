@@ -1,0 +1,49 @@
+{
+    "name": "TipoDocumento",
+    "fields": [
+        {
+            "fieldName": "sigla",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength",
+                "unique"
+            ],
+            "fieldValidateRulesMaxlength": 10
+        },
+        {
+            "fieldName": "nombreDocumento",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 50
+        },
+        {
+            "fieldName": "estado",
+            "fieldType": "Estado",
+            "fieldValues": "ACTIVO,INACTIVO",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "cliente",
+            "otherEntityName": "cliente",
+            "otherEntityRelationshipName": "tipoDocumento"
+        }
+    ],
+    "changelogDate": "20181130121345",
+    "entityTableName": "tipo_documento",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

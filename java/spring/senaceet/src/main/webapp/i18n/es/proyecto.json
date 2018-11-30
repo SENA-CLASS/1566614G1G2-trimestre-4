@@ -1,0 +1,24 @@
+{
+  "senaceetApp": {
+    "proyecto": {
+      "home": {
+        "title": "Proyectos",
+        "createLabel": "Crear nuevo Proyecto",
+        "createOrEditLabel": "Crear o editar Proyecto"
+      },
+      "created": "Un nuevo Proyecto ha sido creado con el identificador {{ param }}",
+      "updated": "Un Proyecto ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Proyecto ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Proyecto {{ id }}?"
+      },
+      "detail": {
+        "title": "Proyecto"
+      },
+      "codigo": "Codigo",
+      "nombre": "Nombre",
+      "estado": "Estado",
+      "fases": "Fases"
+    }
+  }
+}
